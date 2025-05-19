@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    font-weight: lighter; 
+    /* font bolding */
+    text-decoration: yellow underline;
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    /* the comma, in the font name indicated the backup fonts if the first font isnt avaiable */
+}
+h2{
+    text-decoration: lightcoral underline wavy;
+}
+p{
+    text-align: left;
+    line-height: 2.5;
+}
+
+
+/* selector classes  */
+/* element selector, pseudo selector, class selector, id selector */
+/* universal selector  = *  */
