@@ -1,0 +1,31 @@
+Concat= meging array connecting from back array 1 to front array2
+
+sort= soritn
+
+splice(where to start insert, how many to remove, what to add)
+
+slice(from where, to where) negative gives from the back
+
+indexof(what element in the array)
+
+=== vs == in an array
+in js this only compare references in memory, 
+
+when you do this arrya1[] = array2 []
+
+if array1 changed contents then array2 will also choange
+
+const of the array meanning even if the array does not have content anymore
+
+array2D[y][x]
+
+
+JS Objects Literal
+
+collection of properties, with key value pair
+about labelling our information
+
+
+
+
+
