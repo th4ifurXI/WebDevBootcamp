@@ -1,0 +1,69 @@
+body {
+    margin: 10px;
+}
+div {
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+    margin-bottom: 20px;
+    /* margin is the distance/spacing between the boxes/sections/other elements */
+
+}
+
+/* inpect colour:
+green = border 
+orange = margin
+blue= textbox/element space */
+
+#one {
+    background-color: #e5989b;
+    border-width: 5px;
+    border-color: black; 
+    border-style: solid;
+    box-sizing: border-box;
+    /* border  */
+}
+
+#two {
+    background-color: #b5838d;
+    border-color: black;
+    border-width: 3px;
+    box-sizing: border-box;
+    border-style: dashed solid;
+
+    
+}
+
+#three {
+    background-color: #6d6875;
+    border: 4px inset black;
+    border-right-style: dotted;
+    /* border can be set the width, style color in one go */
+    border-radius: 20%;
+    /* percentage is the percentage of the width and height of the box */
+    margin-left: 200px;
+    
+}
+
+/* padding is the distance between border and text box */
+button {
+    padding: 10px 20px 30px 40px;
+    /* all */
+    /* vertical horizontal */
+    /* top horizontal bottom */
+    /* top right bottom left */
+}
+
+
+pan {
+    margin-left: 30px;
+    margin-top:30px;
+}
+
+h1 {
+    background-color: pink;
+    width: 200px;
+    padding-left: 100px;
+    padding-top: 50px;
+    margin: 10;
+}

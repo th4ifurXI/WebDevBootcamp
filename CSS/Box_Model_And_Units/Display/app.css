@@ -1,0 +1,45 @@
+
+
+/* block  */
+span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    width: 500px;
+    /* if an element has a inline, no change in width and height  */
+    /* padding just effect the size of an inline element */
+    /* margin is also effect the side of the elements only */
+    display: inline;
+    padding: 23px;
+    margin: 100px;
+
+
+}
+
+/* inline  */
+h1 {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    display: block;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    /* padding  defines the space between an element's content and its border */
+
+    
+}
+
+/* inline block */
+
+div {
+    height: 200px;
+    width: 200px;
+    /* not square because it is a blcok level element */
+    background-color: olivedrab;
+    border: 5px solid black;
+    /* if you only do inline it causes the width and height can't be modified */
+    /* unless you use inline-block you can modify it */
+    display: inline-block;
+    margin: 50px;
+    /* display: none; this hides the display*/
+
+}

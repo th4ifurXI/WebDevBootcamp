@@ -1,0 +1,93 @@
+
+
+
+/* there are 2 units are Relative and Absolute */
+/* Relative units are used more  */
+
+
+ 
+#percentages {
+    background-color: #6d6875;
+    width: 800px;
+    height: 800px;
+}
+
+
+#percentages div {
+    background-color:#e5989b;
+    width: 70%;
+    height: 50%;
+    /* percentages is relative to something, precentage from the parent, etc. */
+    /* how big of percent you want from the parent */
+    /* can be useful when it involves ratios */
+    /* sometimes it is relative to the font size of the element */
+}
+h1{
+    border: 1px solid black;
+    font-size: 40px;
+    line-height: 200%;
+}
+
+
+h2{
+    font-size: 40px;
+}
+
+/* em a unit that refers to the parent element */
+/* takes the current font size, a multiple of a font size */
+#ems h2 {
+    font-size: 2em;
+    margin-left: 1em;
+}
+#ems h3 {
+    font-size: 1.5em;
+}
+
+#ems p {
+    font-size: 1em;
+}
+
+#ems {
+    font-size: 15px;
+}
+
+#ems ul {
+    font-size: 1.5em;
+}
+
+button {
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+    background-color: #2a9d8f;
+    color: white;
+}
+/* why use scales? makes it easier to resize things compared to using absolute units */
+
+
+/* common issues with em, if we style ul, they can grow and stack because it refers the parent font size */
+
+
+/* rems are referst to the root of the html font size instead of the parent */
+
+html {
+    font-size: 40px;
+
+/* this is the root html font size */
+/* helps makint it a constant element */
+}
+#rems h2{
+    font-size: 3rem;
+}
+#rems h3{
+    font-size: 2rem;
+}
+#rems ul{
+    font-size: 1.5rem;
+}
+
+#rems button{
+    font-size: 1.5rem;
+}
+
+

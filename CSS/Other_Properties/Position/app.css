@@ -1,0 +1,50 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* position sets the top right bottom and left works */
+
+#middle {
+    background-color: #81b29a;
+}
+
+#static #middle {
+    position: static;
+    /* static is constant to effect if we change top right bottom and left */
+    top: 100px;
+}
+
+
+#relative #middle {
+    position: relative;
+    /* relatively from the element */
+    top: 100px;
+    right: 30px;
+    /* offsetting it to the left meaning its moving it to the right? */
+}
+
+
+#absolute {
+    position: relative;
+    /* elements are stack  */
+}
+
+#absolute #middle {
+    position: absolute;
+    /* ist placed relative to the position of its ancessor if it is not position in the element */
+    top: 1px;
+}
+ 
+#fixed #middle {
+    position: fixed;
+    /* stays even if you scrol down */
+    top: 0;
+    left: 400px;
+}
+
+/* sticky, if you want it to be not fixed and then fixed  */

@@ -1,0 +1,146 @@
+/* * {
+    background-color: cyan;
+} */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+h1,h2 { 
+    /* , is an 'and' */
+    color: #1d3557;
+}
+
+/* id selector #IDname*/
+/* id is a unique identifier, one element can only have one unique id */
+#signup{
+    background-color: #1d3557;
+    color: #f1faee;
+}
+/* no recommended to use for all elements, there are better approaches */
+
+
+span {
+    color: #457b9d;
+}
+
+/* class selector */
+.tag { 
+    /* .className is a way to change the classes based on name */
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+/* decendant selector */
+.post a {
+    /* select all <a>'s that is inside the post class */
+    color: #457b9d;
+    font-weight: 700;
+    text-decoration: none;
+}
+footer a {
+    color: #e63946;
+}
+
+/* adjacent selector */
+h2 + button {
+    /* the button that comes after a h1 is 
+    change to the following property */
+    font-size: 20px;
+}
+
+/* direct combinator/decendant */
+footer > a {
+    /* the a directly under a footer */
+    color: #457b9d;
+}
+
+/* attribute selector */
+input[type="password"] {
+    /* change the input that has an attribute called 'password' */
+    color: teal;
+}
+a[href*="google"]{
+    color: #1d3557;
+}
+
+/* Pseudo Classes */
+.post a:hover {
+    /* keyword after : is a pseudo class, in this case which is 'hover', 
+    is when the element is hover over is wil show this */
+    text-decoration: underline;
+}
+
+.post button:hover {
+    /* keyword after : is a pseudo class, in this case which is 'hover', 
+    is when the element is hover over is wil show this */
+    text-decoration: underline wavy;
+}
+
+.post button:active {
+    /* active is when you click it it will change the colour */
+    background-color: #02c39a;
+}
+
+/* nth of type */
+.post.post:nth-of-type(2n){
+    /*  every post which is the 2nth of it changes*/
+    background-color: #dfe8dc;
+}
+
+/* pseudo elements two semicolon :: */
+h2::first-letter {
+    /* changiong a particular part of an element */
+    font-size: 50px;
+}
+
+
+p::first-line {
+    color: purple;
+}
+
+
+p::selection {
+    /* when selected */
+    background-color: #fcbf49;
+}
+
+/* order mattters */
+.post button:hover {
+    /* orders matters includind the <link> in the style sheet */
+    /* the top are done first */
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+/* specifity */
+button:hover {
+    /* this conflicts with post button, it measure the specifity of a button */
+    /* theres a calculator for this */
+    /* the more specific will win */
+    /* id>class>element */
+    background-color: olive;
+    font-size: 20px;
+}
+
+/* inline styles, the most specific */
+/* if we put it directly into the html inline as color: */
+
+/* !important */
+/* not recommended */
+button {
+    background-color: magenta ;
+} 
+
+/* inherit  */
+
+button{
+    /* it inherits to the nearest parent so it will be magenta in this case */
+    color: inherit;
+}

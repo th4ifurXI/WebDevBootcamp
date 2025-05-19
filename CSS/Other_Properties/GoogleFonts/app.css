@@ -1,0 +1,27 @@
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+/* include a font in the document */
+/* free fonts are google fonts cost effective */
+
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+h1 + h2 {
+    /* between h1 and h2 using adjacent selector */
+    margin-top: 10px;
+}
+
+h1,h2,h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+}

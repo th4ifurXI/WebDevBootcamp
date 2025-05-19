@@ -1,0 +1,67 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2{
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center ; 
+    /* how the divs in a box is allign on the main axis  */
+    /* flex-wrap: center ;  */
+    /* auto fit into the shape */
+    align-items: baseline;
+    /* align with baseline of the text */
+    /* align-content only works when flex-wrap is on */
+    /* align-self individually manipulate elements*/
+}
+
+
+#container div {
+    width: 150px;
+    height: 150px;
+    max-width: 300px;  
+    text-align:center; 
+    flex-basis: 200px; 
+    /* mesurement width that used to when we are in a row */
+}
+
+
+div:nth-of-type(1) {
+    flex-grow: 2;
+    /* growing to take up a space in a row */
+    flex-shrink:0;
+    /* if 0, then no shrhink */
+    /* how early/fast it should shrink */
+    /* tjhe number ar ethe ratio how many times should the shape takes space as the default */
+}
+div:nth-of-type(5) {
+    flex-grow: 2;
+}
+
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+main .sidebar {
+    background-color: #6930c3;
+    flex:1 2 300px;
+    /* flex grow, shrink, baseis */
+    /* flex grow, basis */
+    /* grow */
+}
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 1 2 100px;
+}
+ 
