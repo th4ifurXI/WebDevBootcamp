@@ -1,0 +1,90 @@
+so now we will be learing about the codes
+
+
+## TERMINAL COMMANDS
+
+- a text based prompt
+- it is hard/frustating since we are not familiar with it
+
+
+## Why do we need to use terminals as a developer?
+
+- for speed, stuff that needs a lot of clicking can be done under one command
+- Terminal is the accessor to the heart of the computer
+- To access database, more accesss and more tools for developers
+
+### Terminal
+- text-based terminal
+
+### BASH/ZSHELL
+- the most popular shells
+- both are complete different shells
+
+## Basic CMD syntax
+
+## Traversing into the Folders
+### LS
+- Lists
+- lists out the current content in a folder that it is currently in
+
+### PWD
+- Print Working Directory
+- Tells you the 'coords' that you are currently in
+- Tells you where are you in the computer right now
+
+### CD
+- Change Directory
+- changes the director/moves into a folder
+- CD fileName or filePath
+- moving forward in a the computer
+
+### CD ..
+- Go back to the previous file
+- Moving backwards in the computer
+
+## Relative Path
+- CD ../../Pets
+- means go back, go back and then enter into the folder that has the fileName
+
+## Creating Folders
+
+### MKDIR
+- Make Directory
+- it create a folder
+- mkdir location directoryName
+
+### Man
+
+- Manual
+- gives me all the lists of commands
+- type q to get out of the terminal
+
+### Flags
+- -char -singlealphabet -characters
+- a function that can be attach to common commands
+- flags are needed especially to create or delete files in a directory
+
+## Touch
+- makes files for us
+- the files that has a file type
+- not folder but files
+- if files already exists it will 'touch' or select that file
+- updates when it was lasts modified
+
+### RM 
+- Remove File
+- BE CAREFUL ALL FILES DELETED WONT BE SAVED/TRASHED IN RECYCLE BIN
+
+### RMDIR
+- Remove Directory
+- only if the directory is 
+
+## -r
+- recursive, effects also the stuff inside the folder of the current folder
+
+## -f
+- force
+- will force the action inside a folder
+
+
+
