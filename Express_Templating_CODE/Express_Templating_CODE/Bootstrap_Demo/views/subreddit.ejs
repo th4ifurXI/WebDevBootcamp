@@ -1,0 +1,22 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%> 
+<!-- the include here is a partial, making everyting is the same/if you change one link, you can change others that have the same  -->
+ <!-- why do we use partials? helps to make it easier, no need to copy and paste multiple times -->
+
+
+    <h1>Browsing The <%= name %> subreddit</h1>
+    <h2><%= description %></h2>
+    <p><%=subscribers %> Total Subscribers</p>
+    <hr>
+
+    <% for(let post of posts) { %>
+    <article>
+        <p><%= post.title %> - <b><%=post.author %></b></p>
+        <% if(post.img) { %>
+        <img src="<%= post.img %>" alt="">
+        <% } %>
+    </article>
+    <% } %>
+</div>
+<%- include('partials/footer')%>

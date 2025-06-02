@@ -1,0 +1,38 @@
+The following are basic syntax to use in the mongodb terminal
+db = database
+
+
+use dbName - to create a databse if first time being entered in the shell
+insertOne()- insert only one document/data in the database
+insert([])- insert multiple document/data/entries in the db
+{dataType : data, dataType : data, dataType : data }
+
+db collection - table names i would say
+db.collectionName.find({}) -finding a data/entry based on what is in {}
+db.collectionName.findOne({}) - only find one
+
+db.collectionName.update( {what to find (field : data )},$set: { <field1> : data})- updating only one entry, need to use special operators
+db.collectionName.updateOne()-
+
+$currentDate: {lastModified: true} - pass on a last modified
+
+db.colleciton.deleteMany()
+db.collection.deleteOne()
+
+
+Additional Operators for mongodb
+
+nested data 
+example: 
+personality: 
+    catFriendly : true
+
+   $ in mongodb are query selectors
+
+    $gt: - greater than operators
+    $lt: - less than operator
+    add e to $gt or $lt - less than or true
+    $in: - in the array
+    $nin: - not in the array/data
+    $or: - either statement 1, statment 2
+
