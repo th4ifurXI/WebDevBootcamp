@@ -7,7 +7,7 @@ const Review = require('./models/review');
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         //returnTo helps to redirect to the initial page the user was in before logging in
-        req.session.returnTo = req.originalUrl; // add this line
+        //
         req.flash('error', 'You must be signed in first!');
         return res.redirect('/login');
     }

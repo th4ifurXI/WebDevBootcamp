@@ -1,3 +1,5 @@
+//RUNS THIS for default 
+
 if(process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
@@ -9,10 +11,12 @@ const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const session = require('express-session')
 const ExpressError = require('./utils/ExpressError');
+const sanitizeV5 = require('./utils/mongoSanitizeV5.js');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
+
 const User = require('./models/user')
 
 
@@ -44,15 +48,13 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.get('/', (req, res) => {
-    res.render('home')
-});
+
 
 
 const sessionConfig = {
     secret: 'thisshouldbeabettersecret!',
     resave: false,
-    saveUninitilized: true,
+    saveUninitialized: true,
     cookie: {
         httpOnly: true,
         expires: Date.now() + 1000 * 60 * 60 *24 * 7,
@@ -79,6 +81,10 @@ app.use((req, res, next) => {
     res.locals.error = req.flash('error');
     next();
 })
+
+app.get('/', (req, res) => {
+    res.render('home')
+});
 
 app.use('/campgrounds', campgroundsRoutes);
 app.use('/campgrounds/:id/reviews', reviewsRoutes);
