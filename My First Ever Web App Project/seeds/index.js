@@ -1,13 +1,17 @@
-const mongoose = require('mongoose');
-const cities = require('./cities');
-const images = require('./images')
-const { places, descriptors } = require('./seedHelpers');
-const Campground = require('../models/campground');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
+if(process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
+const mongoose = require('mongoose');
+const cities = require('./malaysianCities');
+const images = require('./images')
+const { places, descriptors } = require('./seedHelpersMy');
+const Campground = require('../models/campground');
+const dbURL = process.env.DB_URL;
+
+
+mongoose.connect(dbURL, {
 });
 
 const db = mongoose.connection;
@@ -22,13 +26,13 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
-    for (let i = 0; i < 300; i++) {
-        const random1000 = Math.floor(Math.random() * 1000);
+    for (let i = 0; i < 115; i++) {
+        const random1000 = i;
         const random16 = Math.floor(Math.random() * 16);
         const price = Math.floor(Math.random() * 20) + 10;
 
         const camp = new Campground({
-            author: '68502c2533cb652628740c45',
+            author: '6852a986f7fedf04b4c3afe5',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             geometry: {
